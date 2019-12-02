@@ -24,5 +24,35 @@ namespace LanciaDado
         {
             InitializeComponent();
         }
+
+        private void btnRicomincia_Click(object sender, RoutedEventArgs e)
+        {
+            txtValore.Text = "";
+            lblResult.Content = "";
+        }
+
+        private void btnRandom_Click(object sender, RoutedEventArgs e)
+        {
+            int numero = int.Parse(txtValore.Text);
+            try
+            {
+                if (numero > 6)
+                    throw new Exception("I numeri inseribili sono da 1 a 6.");
+                int da = 1;
+                int a = 7;
+                Random random = new Random();
+                int numeroCasuale = random.Next(da, a);
+                if (numeroCasuale == numero)
+                    lblResult.Content = $"Il numero uscito è {numeroCasuale}. Complimenti! Hai vinto!";
+                else
+                    lblResult.Content = $"Il numero uscito è {numeroCasuale}. Ritenta!";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                txtValore.Text = "";
+                lblResult.Content = "";
+            }
+        }
     }
 }

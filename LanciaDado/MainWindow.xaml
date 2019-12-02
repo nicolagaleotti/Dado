@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LanciaDado"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Lancia Dado" Height="450" Width="800" ResizeMode="CanMinimize">
+    <Grid Background="#FFB2FF86">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="txtValore" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="65" Margin="195,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" FontSize="36" Background="#FFFAFFC3" Grid.Column="1"/>
+        <Label Content="Inserisci un numero da 1 a 6 " HorizontalAlignment="Left" Margin="110,55,0,0" VerticalAlignment="Top" Height="50" Width="570" FontSize="36" FontWeight="Bold" FontFamily="Stencil" Background="#00000000" Grid.Column="1"/>
+        <Button Name="btnRandom" Content="numero random" HorizontalAlignment="Left" Margin="425,127,0,0" VerticalAlignment="Top" Width="255" Height="65" Background="#FFC9FFC3" FontSize="24" FontFamily="Showcard Gothic" Click="btnRandom_Click" Grid.Column="1"/>
+        <Button Name="btnRicomincia" Content="ricomincia" HorizontalAlignment="Left" Margin="425,215,0,0" VerticalAlignment="Top" Width="255" Height="65" FontSize="24" FontFamily="Showcard Gothic" Background="#FFC9FFC3" Click="btnRicomincia_Click" Grid.Column="1"/>
+        <Label Name="lblResult" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="110,310,0,0" VerticalAlignment="Top" Width="570" Height="65" FontSize="24" Background="#FFC9FFC3" Grid.Column="1"/>
     </Grid>
 </Window>
