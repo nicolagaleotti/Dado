@@ -59,6 +59,8 @@ namespace LanciaDado
                     punti = punti - 5;
                     lblPunti.Content = punti.ToString();
                 }
+                txtValore.Clear();
+                txtValore.Focus();
             }
             catch (Exception ex)
             {
